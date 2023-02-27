@@ -47,3 +47,7 @@ Enable service :
 ```shell
 sudo systemctl daemon-reload && sudo systemctl enable tomcat.service
 ```
+
+## henHouseFrontend deployment
+
+1. install NodeJs
