@@ -1,0 +1,13 @@
+
+[Unit]
+Description=front
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/node /home/pi/henHouse/henHouseFrontend/build
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
