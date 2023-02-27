@@ -29,3 +29,19 @@ pip install circus
 ```shell
 sudo systemctl daemon-reload && sudo systemctl enable henHouseBoardBackendApi.service
 ```
+
+## henHouseBackendApi deployment
+
+1. Install java (min Java 17) 
+2. Generate war file of henHouseBackendApi (see https://github.com/tlebigre/henHouseBackendApi) 
+3. Install app server (like Tomcat)
+4. Deploy war file on app server
+
+### Service : example for tomcat
+In */etc/systemd/system* :
+- ***tomcat.service***
+
+Enable service :
+```shell
+sudo systemctl daemon-reload && sudo systemctl enable tomcat.service
+```
