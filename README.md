@@ -56,7 +56,7 @@ sudo systemctl daemon-reload && sudo systemctl enable tomcat.service
 ## henHouseFrontend deployment
 
 1. Install NodeJs
-2. Build (see /home/pi/henHouse/henHouseFrontend/)
+2. Build (see https://github.com/tlebigre/henHouseFrontend#building)
 > :warning: ***You can build app outside raspberry pi (on your development environment)***
 
 3. Copy in */home/pi/henHouse/henHouseFrontend/* (from build folder) :
