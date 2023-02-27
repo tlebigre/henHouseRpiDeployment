@@ -1,3 +1,6 @@
+[![en](https://img.shields.io/badge/lang-en-ab4b52.svg)](https://github.com/tlebigre/henHouseRpiDeployment/blob/main/README.md)
+[![fr](https://img.shields.io/badge/lang-fr-318ce7.svg)](https://github.com/tlebigre/henHouseRpiDeployment/blob/main/README.fr.md)
+
 # Hen house delpoyment on raspberry pi
 ## Enable RTC
 Enable i2c
@@ -34,6 +37,8 @@ sudo systemctl daemon-reload && sudo systemctl enable henHouseBoardBackendApi.se
 
 1. Install java (min Java 17) 
 2. Generate war file of henHouseBackendApi (see https://github.com/tlebigre/henHouseBackendApi) 
+> :warning: ***You can generate war file outside raspberry pi (on your development environment)***
+
 3. Install app server (like Tomcat)
 4. Deploy war file on app server
 
@@ -50,4 +55,19 @@ sudo systemctl daemon-reload && sudo systemctl enable tomcat.service
 
 ## henHouseFrontend deployment
 
-1. install NodeJs
+1. Install NodeJs
+2. Build (see /home/pi/henHouse/henHouseFrontend/)
+> :warning: ***You can build app outside raspberry pi (on your development environment)***
+
+3. Copy in */home/pi/henHouse/henHouseFrontend/* (from build folder) :
+- build (folder)
+- node_modules (folder)
+- package.json (file)
+
+3. Service (in */etc/systemd/system*) :
+- ***henHouseFrontend.service***
+
+4. Enable service :
+```shell
+sudo systemctl daemon-reload && sudo systemctl enable henHouseFrontend.service
+```
