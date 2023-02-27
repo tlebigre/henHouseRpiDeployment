@@ -1,0 +1,14 @@
+[Unit]
+Description=Apache Tomcat Web Application Container
+Requires=henHouseBoardBackendApi.service
+After=henHouseBoardBackendApi.service
+
+[Service]
+Type=forking
+User=root
+
+ExecStart=/opt/tomcat/apache-tomcat-10.1.5/bin/startup.sh
+ExecStop=/opt/tomcat/apache-tomcat-10.1.5/bin/shutdown.sh
+
+[Install]
+WantedBy=multi-user.target
