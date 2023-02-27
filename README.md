@@ -38,6 +38,8 @@ sudo systemctl daemon-reload && sudo systemctl enable henHouseBoardBackendApi.se
 4. Deploy war file on app server
 
 ### Service : example for tomcat
+In my case Tomcat version is 10.1.5 in */opt/tomcat/apache-tomcat-10.1.5*
+
 In */etc/systemd/system* :
 - ***tomcat.service***
 
