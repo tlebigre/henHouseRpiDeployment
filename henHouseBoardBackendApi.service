@@ -1,18 +1,15 @@
 [Unit]
-Description=Hen house board backend api service
-After=syslog.target network.target nss-lookup.target
+Description=Gpio Service
+After=syslog.target nss-lookup.target
 
 [Service]
 Type=simple
 User=pi
 WorkingDirectory=/home/pi/henHouse/henHouseBoardBackendApi
-ExecReload=/home/pi/.local/bin/circusctl reload
-ExecStart=/home/pi/.local/bin/circusd  circus.ini
 Restart=always
+ExecStart=/usr/bin/python3 /home/pi/henHouse/henHouseBoardBackendApi/server.py
 RestartSec=5
 
 [Install]
 WantedBy=default.target
-[Unit]
-Description=Gpio Service
-After=syslog.target network.target nss-lookup.target
+
