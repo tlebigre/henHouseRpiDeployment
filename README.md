@@ -17,9 +17,7 @@ pip install adafruit-circuitpython-ds3231
 pip install grpcio
 ```
 
-2. Code (in *home/pi/henHouse/henHouseBoardBackendApi*) :
-- main.py (see https://github.com/tlebigre/henHouseBoardBackendApi)
-- ***circus.ini***
+2. Code (in *home/pi/henHouse/henHouseBoardBackendApi*) see https://github.com/tlebigre/henHouseBoardBackendApi
 
 3. Service (in */etc/systemd/system*) :
 - ***henHouseBoardBackendApi.service***
